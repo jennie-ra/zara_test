@@ -1,0 +1,457 @@
+body { margin: 0; height: 5000px; }
+
+ul{
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.blind{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+
+}
+.content_box{
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+/* ----- <HEADER_TOP> ----- */
+.header{
+  width: 100%;
+
+}
+.header_top{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+
+}
+/* ham_btn */
+#head_chk{
+  display: none;
+
+
+}
+.ham_chk {
+  display: block;
+  width: 80px;
+  height: 50px;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  margin-top: 100px;
+  margin-left: 30px;
+
+  transform: translateY(-50%);
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color:black;
+  border-radius: 20%;
+
+}
+.line:nth-child(2) {
+  margin: 10px 0;
+}
+
+.top {
+  transition: top 0.5s 0.5s, transform 0.5s ;
+  position: relative;
+  top: 0;
+}
+#head_chk:checked ~ .ham_chk > .top {
+  top: 13px;
+  transform:  rotate(45deg);
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+.mid {
+  transition: all 0s 0.5s;
+}
+#head_chk:checked ~ .ham_chk > .mid {
+
+  opacity: 0;
+  transition: all 0s 0.5s;
+}
+
+.bot {
+  transition: top 0.5s  0.5s, transform 0.5s;
+  position: relative;
+  top: 0;
+}
+#head_chk:checked ~ .ham_chk > .bot {
+  top: -13px;
+  transform:  rotate(-45deg);
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+.nav {
+  width: 600px;
+  height: calc(100vh - 30px);
+
+  background-color:#fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  margin-top:70px;
+
+  position: relative;
+  z-index: 999999;
+}
+#head_chk:checked ~ .nav {
+  transform: translateX(0%);
+ 
+}
+
+
+/* LOGO */
+
+.logo_img{
+  position: absolute;
+  top: 1px;
+  left: 150px;
+}
+.logo_img > svg{
+  width: 300px;
+  height: 200px;
+}
+/* SEARCH_BAR */
+.head_list{
+  display: flex;
+  align-items: center;
+}
+.search{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 400px;
+  height: 30px;
+
+  border-bottom: 1px solid;
+
+  position: absolute;
+  top: 60px;
+  left: 50%;
+}
+
+.search_btn{
+  cursor: pointer;
+  margin: 0;
+}
+.search_bar{
+  width: 350px;
+  height: 70%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  background: transparent;
+
+}
+
+/* HEAD_MENU */
+
+.head_menu{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  font-size: 16px;
+
+  position: absolute;
+  top: 70px;
+  right: 5%;
+}
+
+
+/* ---MAIN--- */
+/* main_img_slide */
+
+.main_img_box{
+  margin: 60px auto 0 auto;
+  width: 70%;
+  position: relative;
+}
+
+.main_top{
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.m_slide1{
+  left: 0;
+  transform: translateX(100%);
+  display: none;
+}
+.indi_box{
+  width: 200px;
+  height: 70px;
+
+  position: absolute;
+  left: 50%;
+  top: 755px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.indi{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:#fff;
+  border: 3px solid gray;
+}
+
+
+/* slide img & slide btn */
+.main_sec2{
+  margin: 0 auto;
+  padding-top:900px ;
+  width: 90%;
+
+}
+
+.slide_img_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+}
+.s_img{
+  height: 700px;
+}
+
+.btn_slide{
+  font-size: 80px;
+  background-color: transparent;
+  border: none;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  
+}
+.btn_slideL{
+  left: 0px;
+}
+.btn_slideR{
+  right: 0px;
+}
+
+/* adv banner1 */
+.adv_banner1{
+  padding-top: 150px;
+}
+.adv_banner_box1{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 은은한 회색 그림자 */
+
+}
+.sale_banner{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.sb_1{
+  left: 0;
+}
+.sb_2{
+  left: 100%;
+}
+
+/* product header */
+.p_header{
+  text-align: center;
+  padding-top:350px ;
+  padding-bottom: 70px;
+}
+
+.p_title{
+  font-size: 40px;
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+.p_desc{
+  font-size: 20px;
+}
+
+/* product list box */
+
+.p_item_list{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.p_list{
+  width: ((100% - 120px)/ 5);
+}
+.list_img{
+  width: 100%;
+  height: 450px;
+}
+
+
+/* 더보기 버튼 */
+.btn_showMore{
+  margin: 50px  auto 0 auto;
+  width: 200px;
+  line-height: 60px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+/* Big Banner */
+.b_adv_title{
+  margin: 200px auto 10px auto;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+.b_adv_desc{
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.b_banner > img{
+  width: 100%;
+  padding-top: 50px;
+}
+
+/* APP DOWNLOAD */
+
+.app_download_box{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(238, 235, 235);
+  margin-top: 200px;
+  display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: center; /* 세로 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+  
+}
+.a_d_title{
+  padding-top: 100px;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+.a_d_desc{
+  padding-top: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+.qr_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 60px;
+}
+.a_d_Ios, .a_d_android {
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 수직 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.app_img{
+  width: 70%;
+  
+}
+.app_desc{
+  padding: 10px;
+}
+
+/* Footer */
+.footer_box{
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  padding: 100px 0 20px 0;
+}
+
+.f_title{
+  font-size: 15px;
+  color: gray;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.f_list{
+  margin-top: 100px;
+
+}
+
+.f_sns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
